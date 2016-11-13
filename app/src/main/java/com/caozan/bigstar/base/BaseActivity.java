@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.caozan.bigstar.volley.RequestManager;
+
 
 /**
  * Created by caozan on 2016/11/2.
@@ -23,9 +25,16 @@ public abstract class BaseActivity extends FragmentActivity {
     private BaseActivity act;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        act = this;
+    protected void onCreate(Bundle arg0) {
+        // TODO Auto-generated method stub
+        super.onCreate(arg0);
+    }
+
+    @Override
+    protected void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+        RequestManager.cancelAll(this);
     }
 
     //用来获取布局中TextView的方法
