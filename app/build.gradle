@@ -25,4 +25,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/volley.jar')
     compile 'com.android.support:support-v4:25.0.0'
+    compile files('libs/universal-image-loader-1.9.5.jar')
 }
